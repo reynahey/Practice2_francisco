@@ -1,0 +1,57 @@
+/* Root container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  height: 6rem;
+  padding: 1.5rem;
+  transition: filter 300ms ease, transform 300ms ease;
+  will-change: filter, transform;
+}
+
+/* Hover + focus effects */
+.logo:hover,
+.logo:focus-visible {
+  filter: drop-shadow(0 0 2em rgba(39, 47, 190, 0.67));
+  transform: scale(1.03);
+}
+
+.logo.react:hover,
+.logo.react:focus-visible {
+  filter: drop-shadow(0 0 2em rgba(55, 64, 199, 0.7));
+}
+
+/* Spin animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: no-preference) {
+  .logo.spin {
+    animation: logo-spin 20s linear infinite;
+  }
+}
+
+/* Card */
+.card {
+  padding: 2rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Docs text */
+.read-the-docs {
+  color: #888;
+  font-size: 0.9rem;
+}
